@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "48131d4d-9c3e-42a5-ae81-281c21803753",
+		"name": "ZeroFriction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17567902"
+	},
+	"item": [
+		{
+			"name": "Create Invoice - https://localhost:7200/api/Invoice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"description\": \"testdesc\",\r\n  \"items\": [\r\n    {\r\n      \"quantity\": 5,\r\n      \"unitPrice\": 100\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7200/api/Invoice",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"Invoice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Invoices - https://localhost:7200/api/Invoice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7200/api/Invoice",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"Invoice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Invoice By Id - https://localhost:7200/api/Invoice/<Guid>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7200/api/Invoice/e51fd951-a896-4fba-b42a-61c5c36548d8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"Invoice",
+						"e51fd951-a896-4fba-b42a-61c5c36548d8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Invoice - https://localhost:7200/api/Invoice/<Guid>",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"description\": \"test description 2\",\r\n  \"items\": [\r\n    {\r\n      \"quantity\": 2,\r\n      \"unitPrice\": 20\r\n    },\r\n    {\r\n      \"quantity\": 3,\r\n      \"unitPrice\": 30\r\n    },\r\n    {\r\n      \"quantity\": 4,\r\n      \"unitPrice\": 40\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7200/api/Invoice/e51fd951-a896-4fba-b42a-61c5c36548d8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"Invoice",
+						"e51fd951-a896-4fba-b42a-61c5c36548d8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Invoice - https://localhost:7200/api/Invoice/<Guid>",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7200/api/Invoice/e51fd951-a896-4fba-b42a-61c5c36548d8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"Invoice",
+						"e51fd951-a896-4fba-b42a-61c5c36548d8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Invoices By Query - https://localhost:7200/api/Invoice/query/<query>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7200/api/Invoice/query/select%20%2A%20from%20c",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"Invoice",
+						"query",
+						"select%20%2A%20from%20c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
