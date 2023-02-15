@@ -38,7 +38,7 @@ I created a web API and 2 class libraries:
 * InvoiceApp.Domain - the domain layer. Holds our entities. Innermost layer
 
 
-![DDD-Layers-Image](https://github.com/Nigel12/Zero-Friction/blob/main/dddlayers.png?raw=true)
+![DDD-Layers-Image](https://github.com/Nigel12/Zero-Friction/blob/development/dddlayers.png?raw=true)
 
 
 Contracts - A contract is an agreement between the client and the server about which data is required and the structure in which it is passed. The DTO object is then converted to the domain structure.
