@@ -40,9 +40,10 @@ async Task<ICosmosConnection> InitializeCosmosConnectionAsync(IConfigurationSect
     var containerName = configurationSection["ContainerId"];
     var endpointUri = configurationSection["EndpointUri"];
     var primaryKey = configurationSection["PrimaryKey"];
+    var partitionKey = configurationSection["PartitionKey"];
     var client = new Microsoft.Azure.Cosmos.CosmosClient(endpointUri, primaryKey);
     var database = await client.CreateDatabaseIfNotExistsAsync(databaseName);
-    await database.Database.CreateContainerIfNotExistsAsync(containerName, "/id", 500);
+    await database.Database.CreateContainerIfNotExistsAsync(containerName, partitionKey, 500);
     var cosmosConnection = new CosmosConnection(client, databaseName, containerName);
     return cosmosConnection;
 }
