@@ -1,5 +1,21 @@
 # Zero-Friction
 
+## Setup Instructions
+
+You will need:
+1. .net 6
+2. IDE - Visual Studio/VS Code
+3. DB - Cosmos DB Emulator/Instance
+
+* Clone the repository - https://github.com/Nigel12/Zero-Friction.git (development branch)
+* Navigate to appsettings.json and modify it with your database URI and Primary key:
+
+![DDD-Layers-Image](https://github.com/Nigel12/Zero-Friction/blob/development/Images/CosmosDBSettings.JPG?raw=true)
+
+* Ensure that the database is running and start the project. Startup Project should be **InvoiceApp**
+* The application will start and create a container
+* The API can be tested using the postman collection or swagger-UI
+
 ## My approach
 
 The domain is the Invoice and InvoiceItems, which are contained within it.
@@ -38,7 +54,7 @@ I created a web API and 2 class libraries:
 * InvoiceApp.Domain - the domain layer. Holds our entities. Innermost layer
 
 
-![DDD-Layers-Image](https://github.com/Nigel12/Zero-Friction/blob/development/dddlayers.png?raw=true)
+![DDD-Layers-Image](https://github.com/Nigel12/Zero-Friction/blob/development/Images/dddlayers.png?raw=true)
 
 
 Contracts - A contract is an agreement between the client and the server about which data is required and the structure in which it is passed. The DTO object is then converted to the domain structure.
