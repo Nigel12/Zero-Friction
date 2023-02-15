@@ -7,7 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="E:\Projects\EMPLOYMENT PROJECTS\Zero Friction\InvoiceApp\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="E:\Projects\EMPLOYMENT PROJECTS\Zero Friction\InvoiceApp\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InvoiceApp.Domain\InvoiceApp.Domain.csproj" />
+    <ProjectReference Include="..\InvoiceApp.Infrastructure\InvoiceApp.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
