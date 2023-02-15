@@ -3,7 +3,7 @@
 ## Setup Instructions
 
 You will need:
-1. .net 6
+1. .Net 6
 2. IDE - Visual Studio/VS Code
 3. DB - Cosmos DB Emulator/Instance
 
